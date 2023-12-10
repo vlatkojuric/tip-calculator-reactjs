@@ -79,7 +79,7 @@ function SelectPercentage({ children, percentage, onSelect }) {
 function Output({ bill, tip }) {
   return (
     <h3>
-      You pay x (${bill} + ${tip})
+      You pay ${bill + tip} (${bill} + ${tip} tip)
     </h3>
   );
 }
@@ -97,4 +97,5 @@ const StyledContainer = styled.div`
   align-items: center;
   gap: 20px;
 `;
+
 export default App;
