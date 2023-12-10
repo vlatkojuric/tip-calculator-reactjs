@@ -1,3 +1,6 @@
+import { useState } from "react";
+import styled from "styled-components";
+
 function App() {
   return (
     <div>
@@ -7,14 +10,16 @@ function App() {
 }
 
 function TipCalculator() {
+  const [bill, setBill] = useState("");
+
   return (
-    <>
+    <StyledContainer>
       <BillInput />
       <SelectPercentage>How did you like the service?</SelectPercentage>
       <SelectPercentage>How did your friend like the service?</SelectPercentage>
       <Output />
       <Reset />
-    </>
+    </StyledContainer>
   );
 }
 
@@ -50,3 +55,11 @@ function Reset() {
 }
 
 export default App;
+
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+`;
